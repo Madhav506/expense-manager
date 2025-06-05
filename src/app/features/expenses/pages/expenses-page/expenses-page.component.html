@@ -1,0 +1,9 @@
+<h2>Expense Manager</h2>
+
+<app-expense-form></app-expense-form>
+
+<ul>
+  <li *ngFor="let expense of expenses$ | async">
+    {{ expense.title }} - ${{ expense.amount.toFixed(2) }}
+  </li>
+</ul>
